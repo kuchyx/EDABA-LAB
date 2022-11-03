@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.10) (preloaded format=pdflatex 2022.11.3)  3 NOV 2022 20:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -60,7 +60,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
 
 {C:/Users/macie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 23--30
+Underfull \hbox (badness 10000) in paragraph at lines 24--31
 
  []
 
@@ -72,9 +72,9 @@ Here is how much of TeX's memory you used:
  21914 multiletter control sequences out of 15000+600000
  471112 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,5n,38p,732b,175s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 34i,5n,38p,442b,177s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\macie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on description.pdf (2 pages, 40900 bytes).
+Output written on description.pdf (2 pages, 40729 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

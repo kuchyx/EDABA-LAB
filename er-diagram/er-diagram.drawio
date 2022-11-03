@@ -1,38 +1,38 @@
 <mxfile host="65bd71144e">
     <diagram id="CCzbelAdY-_EfAq5Ly9S" name="Page-1">
-        <mxGraphModel dx="505" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="425" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="22" value="Player" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="90" y="70" width="160" height="270" as="geometry"/>
+                    <mxGeometry x="90" y="70" width="160" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="+matches&#10;+club&#10;+stamina rating&#10;+favourite position&#10;+personality&#10;+unique traits&#10;+teamwork&#10;+reputation&#10;+transfer status&#10;+loan status&#10;+status&#10;+injuries&#10;+retirement&#10;+age&#10;+wages&#10;+transfeer value" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="22">
-                    <mxGeometry y="30" width="160" height="240" as="geometry"/>
+                <mxCell id="23" value="+matches (relacja)&#10;+club (relacja)&#10;+attributes [many] &#10;+favourite position&#10;+reputation&#10;+contract status&#10;+injuries&#10;+retirement&#10;+age&#10;+wages&#10;+transfer value" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="22">
+                    <mxGeometry y="30" width="160" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="24" value="Club" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="290" y="30" width="160" height="170" as="geometry"/>
+                    <mxGeometry x="290" y="30" width="170" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" value="+financial situation&#10;+players assigned&#10;+staff assigned&#10;+current competition&#10;+stadium quality&#10;+reputation&#10;+stadium location&#10;+country of origin&#10;+number of staff" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="24">
-                    <mxGeometry y="30" width="160" height="140" as="geometry"/>
+                <mxCell id="25" value="+budget&#10;+players assigned (relacja)&#10;+staff assigned (relacja)&#10;+current competitions (relacja)&#10;+facilities quality&#10;+reputation&#10;+stadium location&#10;+country of origin" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="24">
+                    <mxGeometry y="30" width="170" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="Match" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="290" y="210" width="160" height="160" as="geometry"/>
+                    <mxGeometry x="290" y="200" width="160" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="28" value="+clubs taking part&#10;+score&#10;+statistics&#10;+attendance&#10;+weather&#10;+duration&#10;+date&#10;+referee name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="27">
-                    <mxGeometry y="30" width="160" height="130" as="geometry"/>
+                <mxCell id="28" value="+clubs taking part (relacja)&#10;+score&#10;+statistics&#10;+attendance&#10;+weather&#10;+duration&#10;+date&#10;+referee name&#10;+competition (relacja)" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="27">
+                    <mxGeometry y="30" width="160" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="Manager" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="290" y="380" width="160" height="180" as="geometry"/>
+                    <mxGeometry x="290" y="380" width="160" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="30" value="+attributes&#10;+scout skills&#10;+management skills&#10;+reputation&#10;+traits&#10;+personality&#10;+retirement&#10;+age&#10;+wage" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="29">
-                    <mxGeometry y="30" width="160" height="150" as="geometry"/>
+                <mxCell id="30" value="+attributes [list]&#10;//scout skills&#10;//management skills&#10;+reputation&#10;+retirement&#10;+age&#10;+wage" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="29">
+                    <mxGeometry y="30" width="160" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="32" value="Competition" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
-                    <mxGeometry x="90" y="360" width="160" height="170" as="geometry"/>
+                    <mxGeometry x="90" y="360" width="160" height="150" as="geometry"/>
                 </mxCell>
-                <mxCell id="33" value="+min number of players&#10;+list of matches&#10;+schedule&#10;+clubs involved&#10;+prize&#10;+country of origin&#10;+list of stadiums&#10;+reputation&#10;+player requirements" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="32">
-                    <mxGeometry y="30" width="160" height="140" as="geometry"/>
+                <mxCell id="33" value="+matches (relacja)&#10;+schedule&#10;+clubs (relacja)&#10;+prize&#10;+country of origin&#10;+stadiums [list]&#10;+reputation" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="32">
+                    <mxGeometry y="30" width="160" height="120" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
