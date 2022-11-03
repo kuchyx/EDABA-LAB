@@ -1,19 +1,21 @@
 # Fdb version 3
-["xdvipdfmx"] 1666857395 "description.xdv" "description.pdf" "description" 1666857395
-  "description.xdv" 1666857394 26524 2adbb82cd083ac47c14829218720317a "xelatex"
-  (generated)
-  "description.pdf"
-["xelatex"] 1666857394 "/home/kuchy/Zlew/niepraca/Studia/nieprogramy/SEM7/EDABA-LAB/textual-description/description.tex" "description.xdv" "description" 1666857395
-  "/home/kuchy/Zlew/niepraca/Studia/nieprogramy/SEM7/EDABA-LAB/textual-description/description.tex" 1666857394 2765 72635baeeb4b74acd15c920925018648 ""
-  "/usr/share/texmf-dist/tex/latex/base/report.cls" 1650183167 23203 8fbc410e29d3fd675970d5f9698c9c11 ""
-  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1650183167 8448 96f18c76bf608a36ee6fbf021ac1dd32 ""
-  "/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd" 1650183167 2430 06a89bcded389391906798ea7a3f3aaa ""
-  "/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def" 1650183167 35763 558b6bb076dfa9b058fe5c58dc6e0434 ""
-  "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1651231396 5825167 ab39a2fc306c0f5c8733d0c4f6e55a23 ""
-  "description.aux" 1666857394 537 9c7cf4dd775c44d78fe9b093a04bea45 "xelatex"
-  "description.tex" 1666857394 2765 72635baeeb4b74acd15c920925018648 ""
+["pdflatex"] 1667502769 "c:/Files paths/Github Desktop Repositories/Studia/EDABA-LAB/textual-description/description.tex" "description.pdf" "description" 1667502770
+  "C:/Users/macie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1667501407 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/macie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1667501740 11548 d86e5fce734cb4425b65b863b67a5cb7 ""
+  "C:/Users/macie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1667501738 10788010 c590b8e3c45a7b4a4e358d40d7190deb ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993058908 1436 c7f957a372ef2fbe93c0982f96625e12 ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247593066 32080 340ef9bf63678554ee606688e7b5339d ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/tex/latex/base/report.cls" 1657037832 23203 79c43e7b729c67df90b0b3c7627a752a ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1657037832 8448 e0391042ca0932ede1098ae14ada60ba ""
+  "C:/Users/macie/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1664385028 30426 b4bd1ea7df6c51902df8edf551809fb7 ""
+  "c:/Files paths/Github Desktop Repositories/Studia/EDABA-LAB/textual-description/description.tex" 1667502769 3065 45eaebe2afe76761a5f0b71d638d7088 ""
+  "description.aux" 1667502770 646 66cf836b5ab93ef5c1080d4cf8833483 "pdflatex"
+  "description.tex" 1667502769 3065 45eaebe2afe76761a5f0b71d638d7088 ""
   (generated)
   "description.aux"
   "description.log"
-  "description.xdv"
+  "description.pdf"
