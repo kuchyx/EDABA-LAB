@@ -10,33 +10,36 @@ It needs to reflect realistically status, description, attributes of entities co
 
 
 \section{Objects}
-We choose miminial 5 entites to make our task easier \\ 
+We have chosen to make 6 entities \\ 
 \begin{itemize}
-    \item Player - Football players who are involved in matches, are signed to clubs, are coached by specific staff, they are the most important entity in the database as they are base for the whole database to function properly. Their behavior needs to be simulated not only during games but also after and before games.\\
-    Rating for several attributes (stamina, teamwork, etc.), favourite position, reputation, contract status (is player loaned out from another club for example or maybe they do not have a club at all), injuries, retirement, age, wages, transfer value, 
-    \item Club - budget (for wages, transfers), players assigned to club, staff assigned to club, competitions the club is taking part in, facilities quality (like stadium, training ground), reputation, stadium location, country of origin,
-    \item Match - Clubs taking part in (from which we derivate staff and players), score, statistics (like shots on target), attendance, weather, duration (90 minutes or extended time), date, referee name,
-    \item Manager - attributes (scout skills, management skills, couch skills), reputation, retirement, age, wages
-    \item Competition - list of matches, schedule, clubs involved, prize, country of origin, list of stadiums, reputation (importance of the tournament)\\
-    (not tournament because tournament usually refers to like cup compettions not leauge ones)
+    \item Player - Football players who are involved in matches, are signed to clubs, are coached by specific manager, they are the most important entity in the database as they are base for the whole database to function properly. Their behavior needs to be simulated not only during games but also after and before games.\\
+    skill value, position, reputation, contract status (is player loaned out from another club for example or maybe they do not have a club at all), injury status, age, wages, transfer value, 
+    \item Club - budget (for wages, transfers), players assigned to club, manager assigned to club, competitions the club is taking part in, training ground quality, reputation, country of origin,
+    \item Match - Clubs taking part in (from which we derivate manager and players), score, statistics (like shots on target), attendance, weather, duration (90 minutes or extended time), date, referee name
+    \item Manager - skill value, reputation, age, wages
+    \item Competition - list of matches, prize, country, reputation (importance of the tournament)\\
+    (not tournament because tournament usually refers to like cup competitions not league ones)
+    \item Stadium - venue assigned to a club where certain competitions and matches take place, hold information about maximum capacity, stadium reputation, location, year it was build, value of stadium, ticket price, 
 \end{itemize} 
 
 \section{Requirements concerning data}
-Player and staff attributes are between 1 and 10 \\ 
+Players and Manager skill is between 1 and 10 \\ 
 Positions are restricted to Goalkeeper, Defender, Midfield and Attacker \\ 
-Reputation are restricted between 1 and 5 (as in stars with 1 between each step) \\
+Reputations ( for player, manager, club and match) are restricted between 1 and 5 (as in stars with 1 between each step) \\
 Quality of facilities are restricted between 1 and 5 \\ 
-Type of staff - Manager, Coach, Scout, \\ 
 Competition should have at least one match \\ 
 Weather restricted to Sunny, Rainy, Snowy, \\ 
+Contract can be active or expired \\
 
 \section{Business Activities}
 Activities we would like to cover are, players exchanged between clubs, player signed to club, player released from club (end of contract for example)
 \\
-clubs taking part in matches, clubs hiring players and staff, clubs taking part in competition, 
+clubs taking part in matches, clubs hiring players and manager, clubs taking part in competition, 
 players playing in matches \\
-staff being exchanged between clubs, staff signed to club, staff released from club, \\ 
-Competition organizing matches
+manager exchanged between clubs, manager signed to club, manager released from club, \\ 
+Competition organizing matches \\
+Stadium ticket price being raised by club \\
+Get Competition schedule from list of matches 
 
 \chapter{Task 2 - ERD - Entity Relationship Diagram}
 \begin{figure}[htpb]
@@ -45,6 +48,115 @@ Competition organizing matches
     \caption{ERD}
     \label{fig:tikzpgf}
 \end{figure}
+
+\section{Description}
+\subsection{Relationship description}
+
+\paragraph{Stadium      $\rightarrow$ Competion}
+Stadium can belong to many Competitions.
+
+\paragraph{Competion    $\rightarrow$ Stadium}
+Competitions take part in specific Stadiums.
+
+\paragraph{Competion    $\rightarrow$ Match}
+Competition is composed of many Matches.
+
+\paragraph{Match        $\rightarrow$ Competion}
+Match takes part within specific Competition.
+
+\paragraph{Competion $\rightarrow$ Club}
+Competition consists of many clubs.
+
+\paragraph{Club $\rightarrow$ Competion}
+Club takes part if one or none Competition at a time.
+
+\paragraph{Club $\rightarrow$ Stadium}
+Club has Stadium.
+
+\paragraph{Stadium $\rightarrow$ Club}
+Stadium may belong to a Club.
+
+\paragraph{Manager $\rightarrow$ Club}
+Manager works in one Club.
+
+\paragraph{Club $\rightarrow$ Manager}
+Club employs one Manager.
+
+\paragraph{Club $\rightarrow$ Player}
+Club may employ many Players.
+
+\paragraph{Player $\rightarrow$ Club}
+Player may be contracted to a (one) Club.
+
+\paragraph{Match $\rightarrow$ Club}
+Match is played between two Clubs.
+
+\paragraph{Club $\rightarrow$ Match}
+Club may take part in many Matches.
+
+
+\subsection{Attributes description}
+\paragraph{Stadium}
+\begin{itemize}
+    \item capacity - maximum number of fans that can attend Match
+    \item reputation - how popular it is
+    \item location - where is it located
+    \item build year - when it was build
+    \item value - how much is it worth
+    \item ticket price - price to enter a Stadium per person
+\end{itemize}
+
+
+\paragraph{Competition}
+\begin{itemize}
+    \item prize - Sum of money received by winning Club
+    \item country - Where the Competition is taking place
+    \item reputation - how popular it is
+\end{itemize}
+
+
+\paragraph{Manager}
+\begin{itemize}
+    \item skill - how good the Manager is at managing Club
+    \item reputation - how popular Manager is
+    \item age - how old the Manager is
+    \item wage - how much is the Manager paid monthly
+\end{itemize}
+
+
+\paragraph{Club}
+\begin{itemize}
+    \item budget - amount of money it can spend yearly
+    \item training ground quality - how good training grounds are
+    \item reputation - how popular it is
+    \item country of origin - where it was created
+\end{itemize}
+
+
+\paragraph{Match}
+\begin{itemize}
+    \item score - current Match score
+    \item rating - how enjoyable was the game
+    \item attendance - how many people came
+    \item weather - weather condition during the match
+    \item duration - duration of the game
+    \item date - when the game took place
+    \item referee name - who refereed the game
+\end{itemize}
+
+
+\paragraph{Player}
+\begin{itemize}
+    \item skill - how good the Player is
+    \item position - position the Player is the best at
+    \item reputation - how popular Player is
+    \item contract status - whether the Player has active contract with a Club or is it expired
+    \item injuries - days until healed (0 if no injuries present)
+    \item age - how old the Player is
+    \item wages - how much the Player is paid monthly
+    \item transfer value - how much the Player is worth
+\end{itemize}
+
 
 
 \end{document}
