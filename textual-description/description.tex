@@ -13,14 +13,12 @@ It needs to reflect realistically status, description, attributes of entities co
 \section{Objects}  \label{Objects Section}
 We have chosen to make 6 entities \\ 
 \begin{itemize}
-    \item Player - Football players who are involved in matches, are signed to clubs, are coached by specific manager, they are the most important entity in the database as they are base for the whole database to function properly. Their behavior needs to be simulated not only during games but also after and before games.\\
-    skill value, position, reputation, contract status (is player loaned out from another club for example or maybe they do not have a club at all), injury status, age, wages, transfer value, 
-    \item Club - budget (for wages, transfers), players assigned to club, manager assigned to club, competitions the club is taking part in, training ground quality, reputation, country of origin,
-    \item Match - Clubs taking part in (from which we derivate manager and players), score, statistics (like shots on target), attendance, weather, duration (90 minutes or extended time), date, referee name
-    \item Manager - skill value, reputation, age, wages
-    \item Competition - list of matches, prize, country, reputation (importance of the tournament)\\
-    (not tournament because tournament usually refers to like cup competitions not league ones)
-    \item Stadium - venue assigned to a club where certain competitions and matches take place, hold information about maximum capacity, stadium reputation, location, year it was build, value of stadium, ticket price, 
+    \item Player - Football players are the most important part of this database, they take part in matches on behalf of the club, and their skill is main determinant of the outcome of games.
+    \item Club - Represents football club - entity build around the football team which incorporates staff, players. Football teams represent clubs in competitions and club handles their wages. 
+    \item Match - Game governed within football regulations between two football teams.
+    \item Manager - Responsible for managing team, picking squad, organizing training, buying players, handling team conflicts, choosing and improving tactics. 
+    \item Competition - Event where football teams play against each other in one or more matches in order to win prize. 
+    \item Stadium - Venue assigned to a club where matches and competitions consisting of those matches take place.
 \end{itemize} 
 
 \section{Requirements concerning data}
