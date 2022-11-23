@@ -164,6 +164,13 @@ Player entity represents Player object from \hyperref[Objects Section]{Objects S
     \item transfer value - how much the Player is worth
 \end{itemize}
 
+\subsection{Relational diagram}
+\paragraph{Description}
+A relational diagram was generated using SQL developer. The most notable aspects of it are:\\
+- Entities remain the same as in the logical diagram, they are now described with higher details written by the generation.\\
+- Most of the relations remained visually the same aside from three, those are:\\
+- STADIUM:COMPETITION-takes\_place\_in along with CLUB:MATCH-takes\_part\_in have been separated into a relational block based on the fact that those are N:M relations\\
+- MANAGER:CLUB-works was disjoined into two relations due to the original relation being 1:1 with identity
 
 
 \end{document}
