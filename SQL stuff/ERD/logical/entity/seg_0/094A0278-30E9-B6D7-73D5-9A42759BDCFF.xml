@@ -22,7 +22,6 @@
 <engineerTo>
 <item key="B35798F8-215A-519F-543C-7A900EBF8BAF" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -106,11 +105,25 @@
 <logicalDatatype>LOGDT021</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID1" id="EEF7DEF2-8643-A012-0FE7-188832C77EBF">
+<createdBy>macie</createdBy>
+<createdTime>2022-11-23 10:53:44 UTC</createdTime>
+<generatorID>67C73A80-59A2-6CE3-F1E7-78D706CACA46</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="B35798F8-215A-519F-543C-7A900EBF8BAF" value="true"/>
+</engineerTo>
+<referedAttribute>E1FA19BC-94DF-4805-354E-E903363BD3A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="DF4B7E9B-60EA-1CCA-0171-0545ABA26F30" name="Key_1">
+<identifier id="7D366038-F5A5-7414-ABC5-6359FD6BAF71" name="Key_1">
 <createdBy>macie</createdBy>
-<createdTime>2022-11-23 10:26:37 UTC</createdTime>
+<createdTime>2022-11-23 10:52:48 UTC</createdTime>
 <ownerDesignName>ERD</ownerDesignName>
 <engineerTo>
 <item key="B35798F8-215A-519F-543C-7A900EBF8BAF" value="true"/>

@@ -132,6 +132,21 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID1" id="FABA3581-4FC0-5A8A-CB86-761937AC2A9C">
+<createdBy>macie</createdBy>
+<createdTime>2022-11-23 10:53:44 UTC</createdTime>
+<generatorID>37C391BC-519D-B4D0-CF4F-C1617F2EE5A4</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="B35798F8-215A-519F-543C-7A900EBF8BAF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E1FA19BC-94DF-4805-354E-E903363BD3A3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="47E35D28-113A-16EF-963C-28292C16B79B" name="Key_1">
