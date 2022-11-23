@@ -166,8 +166,22 @@ Player entity represents Player object from \hyperref[Objects Section]{Objects S
 \chapter{Task 3 - Relational schema}
 \section{Relational schema}
 \includepdf[pages=1]{relational.pdf}
-
-
+\section{Description}
+A relational diagram was generated using SQL developer. The most notable aspects of it are:\\
+\\
+\paragraph{Entities descriptions}
+How entities changed, from logical diagram:\\
+- STADIUM - Nothing of note changed, but now types of attributes and stored relations with other entities are displayed.\\
+- COMPETITION - Nothing of note changed, but now types of attributes are displayed.\\
+- MANAGER - Nothing of note changed, but now types of attributes and stored relations with other entities are displayed.\\
+- CLUB - Nothing of note changed, but now types of attributes and stored relations with other entities are displayed.\\
+- MATCH - Nothing of note changed, but now types of attributes and stored relations with other entities are displayed.\\
+- PLAYER - Nothing of note changed, but now types of attributes and stored relations with other entities are displayed.\\
+\paragraph{Relations descriptions}
+How relations changed from logical diagram.\\
+- Most of the relations remained visually the same aside from three, those are:\\
+- STADIUM:COMPETITION-takes\_place\_in along with CLUB:MATCH-takes\_part\_in have been separated into a relational block based on the fact that those are N:M relations\\
+- MANAGER:CLUB-works was disjoined into two relations due to the original relation being 1:1 with identity
 
 
 \end{document}
