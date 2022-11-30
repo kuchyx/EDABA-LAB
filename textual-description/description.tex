@@ -173,12 +173,14 @@ A relational diagram was generated using SQL developer. The most notable aspects
 \\
 \paragraph{Entities descriptions}
 How entities changed, from logical diagram:\\
-In every entity we now have foreign keys to entities with whom entity has relations. In case of many to many relations new entities containing information about keys of two connected entities were created 
+In every entity we now have foreign keys to entities with whom entity has relations. In case of many to many relations new data blocks containing information about keys of two connected entities were created 
 \paragraph{Relations descriptions}
-How relations changed from logical diagram.\\
-- Most of the relations remained visually the same aside from three, those are:\\
-- STADIUM:COMPETITION-takes\_place\_in along with CLUB:MATCH-takes\_part\_in have been separated into a relational block based on the fact that those are N:M relations\\
-- MANAGER:CLUB-works was disjoined into two relations due to the original relation being 1:1 with identity
+How relations changed from logical diagram. \\ 
+Most of the relations remained visually the same aside from three, those are:
+\begin{itemize}
+\item STADIUM:COMPETITION-takes\_place\_in along with CLUB:MATCH-takes\_part\_in have been separated into a relational block based on the fact that those are N:M relations
+\item MANAGER:CLUB-works was disjoined into two relations due to the original relation being 1:1 with identity
+\end{itemize}
 
 
 \end{document}
