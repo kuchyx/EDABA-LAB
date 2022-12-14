@@ -1,3 +1,6 @@
+--variable loops number
+--loops := 1000;
+
 alter table manager
     DISABLE constraint manager_club_fk;
 
@@ -6,6 +9,8 @@ alter table club
 alter table club
     DISABLE constraint club_competition_fk;
 
+truncate table takes_part_in cascade;--
+truncate table takes_place_in cascade;--
 truncate table player cascade;--
 truncate table match cascade;--
 truncate table stadium cascade;--
@@ -30,7 +35,7 @@ insert into competition
     DBMS_RANDOM.value(1,5) as reputation
 --into competionTemp 
 from dual
-connect by level <=10
+connect by level <=1000
 ;
 
 insert into manager
@@ -42,7 +47,7 @@ insert into manager
         DBMS_RANDOM.value(0,1000000) as wage,
         level as club_id
 from dual
-connect by level <=10
+connect by level <=1000
 ;
 
 insert into club
@@ -53,10 +58,10 @@ insert into club
     DBMS_RANDOM.value(1,5)as training_ground_quality,
     DBMS_RANDOM.value(1,5) as reputation,
     dbms_random.string('A', 6) as country_of_origin,
-    level as competition_id, --https://stackoverflow.com/questions/27879874/how-to-get-random-foreign-key-in-sql-developer
+    dbms_random.value(1,1000) as competition_id, --https://stackoverflow.com/questions/27879874/how-to-get-random-foreign-key-in-sql-developer
     level as manager_id
 from dual
-connect by level <=10
+connect by level <=1000
 ;
 
 -- attempt at getting random id from competition: (SELECT id FROM competition SAMPLE(1) WHERE rownum = 1)
@@ -72,7 +77,7 @@ insert into stadium
     DBMS_RANDOM.value(0,200) as ticket_price,
     level as club_id
 from dual
-connect by level <=10
+connect by level <=1000
 ;
 
 --insert into match
@@ -87,7 +92,7 @@ connect by level <=10
 --        dbms_random.string('A', 6) as referee_name,
 --        level as competition_id
 --    from dual
---connect by level <=10
+--connect by level <=1000
 --;
 
 
@@ -102,9 +107,25 @@ insert into player
         DBMS_RANDOM.value(15, 50) as age,
         DBMS_RANDOM.value(15, 50) as wages,
         DBMS_RANDOM.value(0, 1000000000) as transfer_value,
-        level as club_id
+        dbms_random.value(1,1000) as club_id
     from dual 
-connect by level <=10
+connect by level <=1000
+;
+
+--insert into takes_part_in 
+--    select 
+--        level as club_id,
+--        level as match_id
+--    from dual 
+--connect by level <=1000
+--;
+
+insert into takes_place_in 
+    select 
+        dbms_random.value(1,1000) as stadium_id,
+        dbms_random.value(1,1000) as competition_id
+    from dual 
+connect by level <=1000
 ;
 
 alter table manager
