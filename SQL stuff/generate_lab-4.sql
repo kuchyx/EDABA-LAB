@@ -14,7 +14,7 @@ truncate table manager cascade;--
 truncate table club cascade;--
 truncate table competition cascade;--competition is last since it has no foreign keys (but club holds a foreign key to competition)
 
-declare loops number := 10;
+declare loops number := 20;
 begin
 
 --create table countryTable (Cname varchar(20))
@@ -46,7 +46,7 @@ insert into manager
         DBMS_RANDOM.value(0,1000000) as wage,
         level as club_id
 from dual
-connect by level <=10
+connect by level <=loops
 ;
 
 insert into club
@@ -57,10 +57,10 @@ insert into club
     DBMS_RANDOM.value(1,5)as training_ground_quality,
     DBMS_RANDOM.value(1,5) as reputation,
     dbms_random.string('A', 6) as country_of_origin,
-    dbms_random.value(1,10) as competition_id, --https://stackoverflow.com/questions/27879874/how-to-get-random-foreign-key-in-sql-developer
+    dbms_random.value(1,loops) as competition_id, --https://stackoverflow.com/questions/27879874/how-to-get-random-foreign-key-in-sql-developer
     level as manager_id
 from dual
-connect by level <=10
+connect by level <=loops
 ;
 
 -- attempt at getting random id from competition: (SELECT id FROM competition SAMPLE(1) WHERE rownum = 1)
@@ -76,7 +76,7 @@ insert into stadium
     DBMS_RANDOM.value(0,200) as ticket_price,
     level as club_id
 from dual
-connect by level <=10
+connect by level <=loops
 ;
 
 insert into match
@@ -91,7 +91,7 @@ insert into match
         dbms_random.string('A', 6) as referee_name,
         level as competition_id
     from dual
-connect by level <=10
+connect by level <=loops
 ;
 
 
