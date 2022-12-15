@@ -1,10 +1,3 @@
---variable loops number
---loops := 10;
-
-
-
-
-
 truncate table takes_part_in cascade;--
 truncate table takes_place_in cascade;--
 truncate table player cascade;--
@@ -14,7 +7,7 @@ truncate table manager cascade;--
 truncate table club cascade;--
 truncate table competition cascade;--competition is last since it has no foreign keys (but club holds a foreign key to competition)
 
-declare loops number := 20;
+declare loops number := 10;
 begin
 
 --create table countryTable (Cname varchar(20))
@@ -111,20 +104,34 @@ insert into player
 connect by level <=loops
 ;
 
-insert into takes_part_in 
-    select 
-        dbms_random.value(1,loops) as club_id,
-        dbms_random.value(1,loops) as match_id
-    from dual 
-connect by level <=loops
-;
+--insert into takes_part_in
+--    select club.id, match.id from club, match;--creates a table 1-1 everything into everything
+    
+insert into takes_part_in
+    SELECT club_id, match_id
+    FROM   (
+        SELECT club.id as club_id, match.id as match_id
+        FROM  club, match
+        ORDER BY DBMS_RANDOM.RANDOM)
+    WHERE  rownum < 11;
 
-insert into takes_place_in 
-    select 
-        dbms_random.value(1,loops) as stadium_id,
-        dbms_random.value(1,loops) as competition_id
-    from dual 
-connect by level <=loops
-;
+--insert into takes_part_in 
+--    select 
+--        dbms_random.value(1,loops) as club_id,
+--        dbms_random.value(1,loops) as match_id
+--    from dual 
+--connect by level <=loops
+--;
+
+--insert into takes_place_in
+--    select stadium.id, competition.id from stadium, competition ORDER BY DBMS_RANDOM.RANDOM limit 10;
+
+--insert into takes_place_in 
+--    select 
+--        dbms_random.value(1,loops) as stadium_id,
+--        dbms_random.value(1,loops) as competition_id
+--    from dual 
+--connect by level <=loops
+--;
 
 end;
