@@ -12,22 +12,12 @@ begin
 declare many_to_many number := 15;
 begin
 
---create table countryTable (Cname varchar(20))
---
---insert into table countryTable values('Poland')
---insert into table countryTable values('England')
---insert into table countryTable values('USA')
---insert into table countryTable values('Brazil')
---insert into table countryTable values('France')
-
 insert into competition
     select 
    level +(select nvl(max(id),0) from competition) as id,
     DBMS_RANDOM.value(0,1000000) as prize,
     dbms_random.string('A', 6) as country,
---    (select Cname from countryTable order by random() limit 1) as country,
     DBMS_RANDOM.value(1,5) as reputation
---into competionTemp 
 from dual
 connect by level <=loops
 ;
@@ -45,7 +35,6 @@ connect by level <=loops
 ;
 
 insert into club
---(id, budget, training_ground_quality, reputation, country_of_origin, competition_id, manager_id)
     select
    level +(select nvl(max(id),0) from club) as id,
     DBMS_RANDOM.value(0,1000000) as budget,
@@ -57,8 +46,6 @@ insert into club
 from dual
 connect by level <=loops
 ;
-
--- attempt at getting random id from competition: (SELECT id FROM competition SAMPLE(1) WHERE rownum = 1)
 
 insert into stadium
     select 
@@ -105,10 +92,7 @@ insert into player
     from dual 
 connect by level <=loops
 ;
-
---insert into takes_part_in
---    select club.id, match.id from club, match;--creates a table 1-1 everything into everything
-    
+ 
 insert into takes_part_in
     SELECT club_id, match_id
     FROM   (
@@ -117,17 +101,6 @@ insert into takes_part_in
         ORDER BY DBMS_RANDOM.RANDOM)
     WHERE  rownum <= many_to_many;
 
---insert into takes_part_in 
---    select 
---        dbms_random.value(1,loops) as club_id,
---        dbms_random.value(1,loops) as match_id
---    from dual 
---connect by level <=loops
---;
-
---insert into takes_place_in
---    select stadium.id, competition.id from stadium, competition ORDER BY DBMS_RANDOM.RANDOM limit 10;
-
 insert into takes_place_in
     SELECT stadium_id, competition_id
     FROM   (
@@ -135,14 +108,6 @@ insert into takes_place_in
         FROM  stadium, competition
         ORDER BY DBMS_RANDOM.RANDOM)
     WHERE  rownum <= many_to_many;
-
---insert into takes_place_in 
---    select 
---        dbms_random.value(1,loops) as stadium_id,
---        dbms_random.value(1,loops) as competition_id
---    from dual 
---connect by level <=loops
---;
 
 end;
 end;
