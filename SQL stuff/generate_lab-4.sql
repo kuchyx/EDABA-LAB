@@ -7,7 +7,9 @@ truncate table manager cascade;--
 truncate table club cascade;--
 truncate table competition cascade;--competition is last since it has no foreign keys (but club holds a foreign key to competition)
 
-declare loops number := 10;
+declare loops number := 50;
+begin
+declare many_to_many number := 15;
 begin
 
 --create table countryTable (Cname varchar(20))
@@ -113,7 +115,7 @@ insert into takes_part_in
         SELECT club.id as club_id, match.id as match_id
         FROM  club, match
         ORDER BY DBMS_RANDOM.RANDOM)
-    WHERE  rownum < 11;
+    WHERE  rownum <= many_to_many;
 
 --insert into takes_part_in 
 --    select 
@@ -126,6 +128,14 @@ insert into takes_part_in
 --insert into takes_place_in
 --    select stadium.id, competition.id from stadium, competition ORDER BY DBMS_RANDOM.RANDOM limit 10;
 
+insert into takes_place_in
+    SELECT stadium_id, competition_id
+    FROM   (
+        SELECT stadium.id as stadium_id, competition.id as competition_id
+        FROM  stadium, competition
+        ORDER BY DBMS_RANDOM.RANDOM)
+    WHERE  rownum <= many_to_many;
+
 --insert into takes_place_in 
 --    select 
 --        dbms_random.value(1,loops) as stadium_id,
@@ -134,4 +144,5 @@ insert into takes_part_in
 --connect by level <=loops
 --;
 
+end;
 end;
