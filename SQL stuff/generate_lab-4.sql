@@ -1,3 +1,6 @@
+-- USE alterscript.sql BEFORE RUNNING THIS SCRIPT (FIRST 7 LINES)
+-- AFTER USING THIS SCRIPT RUN LAST 7 LINES FROM THE SAME FILE
+
 truncate table takes_part_in cascade;--
 truncate table takes_place_in cascade;--
 truncate table player cascade;--
@@ -7,9 +10,9 @@ truncate table manager cascade;--
 truncate table club cascade;--
 truncate table competition cascade;--competition is last since it has no foreign keys (but club holds a foreign key to competition)
 
-declare loops number := 50;
+declare loops number := 1000;
 begin
-declare many_to_many number := 15;
+declare many_to_many number := 150;
 begin
 
 insert into competition
@@ -86,7 +89,7 @@ insert into player
         dbms_random.string('A', 6) as contract_status,
         DBMS_RANDOM.value(0, 700) as injuries,
         DBMS_RANDOM.value(15, 50) as age,
-        DBMS_RANDOM.value(15, 50) as wages,
+        DBMS_RANDOM.value(0, 100000000) as wages,
         DBMS_RANDOM.value(0, 1000000000) as transfer_value,
         dbms_random.value(1,loops) as club_id
     from dual 
@@ -111,3 +114,6 @@ insert into takes_place_in
 
 end;
 end;
+
+-- USE alterscript.sql BEFORE RUNNING THIS SCRIPT (FIRST 7 LINES)
+-- AFTER USING THIS SCRIPT RUN LAST 7 LINES FROM THE SAME FILE
