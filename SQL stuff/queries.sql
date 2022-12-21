@@ -19,9 +19,26 @@ FROM Stadium
 GROUP BY build_year
 HAVING count(id) < 1000
 
--- correlated, nested subqueries (
+-- correlated, nested subqueries (print Players who earn more wage than the average wage in a given Club)
+SELECT id, wages, club_id
+FROM Player p
+WHERE wages >
+ (SELECT AVG(wages)
+ FROM Player
+WHERE club_id =
+p.club_id)
+ORDER BY wages
+
 
 -- join (print how much manager earns in each club)
 SELECT Club.id AS Club_id, Manager.id AS Manager_id, Club.reputation AS Club_reputation, Manager.wage AS Manager_wage
 FROM Club
 INNER JOIN Manager ON Club.Manager_id = Manager.id
+
+-- right join (print all Club id's and their Players or null if a Club does not have a single Player)
+SELECT Player.id AS Player_id, Club.id AS Club_id
+FROM Player
+RIGHT JOIN Club ON Player.Club_id = Club.id
+ORDER BY Player.id
+
+
