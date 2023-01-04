@@ -87,7 +87,7 @@ insert into player
         dbms_random.string('A', 6) as position,
         DBMS_RANDOM.value(1, 5) as reputation,
         dbms_random.string('A', 6) as contract_status,
-        DBMS_RANDOM.value(0, 700) as injuries,
+        DBMS_RANDOM.value(0, 700) as injuries, -- in days, max injury can take about 2 years (700 days)
         DBMS_RANDOM.value(15, 50) as age,
         DBMS_RANDOM.value(0, 100000000) as wages,
         DBMS_RANDOM.value(0, 1000000000) as transfer_value,
