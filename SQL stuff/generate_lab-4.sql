@@ -72,7 +72,7 @@ insert into match
         DBMS_RANDOM.value(0, 40000) as attendance,
         dbms_random.string('A', 6) as weather,
         DBMS_RANDOM.value(0,120) as duration,
-        To_date(TRUNC(DBMS_RANDOM.VALUE(TO_CHAR(DATE '1950-01-01','J') ,TO_CHAR(DATE '2001-12-31','J'))), 'J') as date2,
+        To_date(TRUNC(DBMS_RANDOM.VALUE(TO_CHAR(DATE '1900-01-01','J') ,TO_CHAR(DATE '2023-12-31','J'))), 'J') as date2,
         dbms_random.string('A', 6) as referee_name,
         level as competition_id
     from dual
