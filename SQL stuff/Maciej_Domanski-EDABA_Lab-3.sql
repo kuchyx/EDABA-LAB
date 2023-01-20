@@ -27,7 +27,7 @@ values(1000000, 5, 'striker', 3, 'valid', 5, 35, 1000, 20000000, 1)
 -- Run before/after trigger
 -- show competition where prize was updated which later changes club reputation
 select * from competition where id = 1
--- show club affected by update trigger when competition prize is high enough
+-- show club affected by update trigger when affected competition prize is high enough
 select * from club where competition_id = 1
 
 -- Run to create trigger
@@ -52,7 +52,7 @@ where id = 1;
 -- Run before/after trigger
 -- show club which budget was affected by inserting or deleting new/old player
 select * from club where id = 1
--- select player who is inserted and by that affects club budget
+-- select player who is deleted and by that affects club budget
 select * from player where id = 1000000
 
 -- Run to create trigger
