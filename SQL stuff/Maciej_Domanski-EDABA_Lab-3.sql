@@ -1,4 +1,4 @@
---Maciej Domañski 303853 - EDABA Lab 3
+--Maciej Domanski 303853 - EDABA Lab 3
 ----------------------- INSERT TRIGGER -----------------------
 
 -- Run before/after trigger
